@@ -384,7 +384,6 @@ nav ul li a:hover{
     width: 100%;
     height: auto;
 }
-
 .projet-titre h2{
     font-size: 24px;
     font-family: 'Times New Roman', Times, serif;
@@ -402,8 +401,9 @@ nav ul li a:hover{
     text-align: center;
 }
 .contenaire-projet{
-    display: grid;
-    grid-template-columns: repeat(auto-fit , minmax(300px ,1fr));
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
     gap: 30px;
     width: 95%;
     margin: 30px auto;    
@@ -443,7 +443,6 @@ nav ul li a:hover{
 
 
 /* ********* pour la section contact ************************ */
-
 .section-contact{
     margin-top: 20px;
     padding: 10px;
@@ -455,16 +454,14 @@ nav ul li a:hover{
     margin: 10px auto;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     gap: 10px;
 }
-
 .div-section-contact-text{
     display: flex;
     flex-direction: column;
     gap: 10px;
-    width: 400px;
 }
 .div-section-contact-text h2{
     margin-top: -20px;
