@@ -407,7 +407,7 @@ nav ul li a:hover{
     gap: 30px;
     width: 95%;
     margin: 30px auto;    
-    justify-items: center;
+    
 }
 .projet{
     width:340px;
@@ -663,8 +663,6 @@ footer{
             justify-content: center;
         }
 }
-
-
 @media (max-width: 999px){
     /*pour l'accueille */
     .accueil-section{
