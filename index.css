@@ -402,7 +402,7 @@ nav ul li a:hover{
 }
 .contenaire-projet{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: wrap;
     gap: 30px;
     width: 95%;
