@@ -56,14 +56,12 @@ header{
     margin-left: 5px;
 }
 
-.boutton-bar{
-    display: none;
-}
-.boutton-bar-ferme {
-    display: none;
+.boutton-bar-ferme , .boutton-bar{
+    display:none;
 }
 nav{
     margin-right: 20px;
+    display:flex;
 }
 nav ul{
     display: flex;
@@ -598,22 +596,24 @@ footer{
 
 @media (max-width:1000px){
      nav{
-        display: none;
-        position: absolute;
+        position: fixed;
         top: 0px;
         right: 0px;
         bottom: 0px;
         width: 70%;
         background-color: var(--bg-color--);
+        z-index: 100000;
         box-shadow: 0px 1px 1px 1px var(--boutton-color--);
-        margin-right: 0px;
+        margin-right: 0px; 
+        display: none;
+
      }
      nav ul{
-        display: flex;
+         display: flex;
         flex-direction: column;
         height: 70%;
         margin: auto;
-        margin-top: 80px;
+        margin-top: 80px; 
      }
 
      .boutton-bar{
@@ -625,16 +625,15 @@ footer{
            border-radius: 10px;
            border: none;
            color: white;
-           display: block;
+           display: flex;
       }
-      .boutton-bar:hover{
+      .boutton-bar:hover , .boutton-bar-ferme:hover{
         background-color: var(--boutton-color--);
       }
-      .boutton-bar i{
+      .boutton-bar i ,  .boutton-bar-ferme i{
            color: var(--text-color--);
       }
-
-       .boutton-bar-ferme{
+     .boutton-bar-ferme{
            padding: 5px;
            border-radius: 5px;
            background: none;
@@ -642,25 +641,19 @@ footer{
            outline: none;
            cursor: pointer;
            border: none;
-          position: absolute;
-          top: 20px;
-          right: 10px;
-        }
-        .boutton-bar-ferme:hover{
-            background-color: var(--boutton-color--);
-        }
-        .boutton-bar-ferme i{
-           color: var(--text-color--);
-        } 
-
-        .contenaire-accueil{
+           position: absolute;
+           top: 20px;
+           right: 10px; 
+           display: flex;
+    }
+    .contenaire-accueil{
             margin-top: 30px;
             gap: 20px;
-        }
-        .div-section-contact{
+    }
+    .div-section-contact{
             display: flex;
             justify-content: center;
-        }
+    }
 }
 @media (max-width: 999px){
     /*pour l'accueille */
@@ -689,7 +682,6 @@ footer{
     .div-reseaux span {
         margin-left: -20px;
       }
-
      /* le code pour ls competences  */
      .contenaire-competences{
         width: 100%;
@@ -714,17 +706,13 @@ footer{
      .autre-competence i{
         font-size: 19px;
      }
-
      /* pour les projet */
      .contenaire-projet{
         justify-items: center;
-     }
-    
+     }   
 }
 
-
 /* pour les portable */
-
 @media (max-width: 690px) {
       /* pouir la section accueille */
       .accueil-section{
@@ -741,12 +729,12 @@ footer{
         gap: 10px;
       }
       .accueil-texte{
-            display: flex;
-            flex-direction: column;
-            width: 100%;
-            margin-left: 0px;
-            margin-top: 3px;
-            padding: 10px;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin-left: 0px;
+        margin-top: 3px;
+        padding: 10px;
       }
       .accueil-texte h3{
           font-size: 14px;
@@ -860,6 +848,4 @@ footer{
       .div-footer{
         width: 100%;
       }
-
-
 }

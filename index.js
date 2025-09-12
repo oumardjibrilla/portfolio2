@@ -9,18 +9,25 @@ const boutton_menu_bar = document.querySelector('.boutton-bar')
 const boutton_menu_bar_ferme = document.querySelector('.boutton-bar-ferme')
 
 boutton_menu_bar.addEventListener('click' , () =>{
-     nav.style.display='block'
-     boutton_menu_bar_ferme.style.display='block'
-     boutton_menu_bar.style.display='none'
+      nav.style.display='flex'
+      boutton_menu_bar_ferme.style.display='block'
+      boutton_menu_bar.style.display='none'
 })
 
 boutton_menu_bar_ferme.addEventListener('click' ,()=>{
-     nav.style.display='none'
-     boutton_menu_bar_ferme.style.display='none'
-     boutton_menu_bar.style.display='block'
-
+      nav.style.display='none'
+      boutton_menu_bar.style.display='flex' 
+      boutton_menu_bar_ferme.style.display='none'
 })
 
+/* Important : réinitialiser en desktop */
+window.addEventListener('resize', () => {
+  if (window.innerWidth > 1000) {
+    nav.style.display ='flex';
+    boutton_menu_bar_ferme.style.display = 'none';
+    boutton_menu_bar.style.display = 'none';
+  }
+});
 
 /* poru l'envoie du mail */
 
