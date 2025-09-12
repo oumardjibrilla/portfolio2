@@ -6,6 +6,8 @@
     <title>portfolio</title>
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- pour le aos -->
+     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script type="text/javascript"
         src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
     </script>
@@ -20,7 +22,7 @@
 <body>
       <section class="accueil-section" id="accueil-section">
 
-             <header>
+             <header data-aos="fade-down">
                      <div class="header-titre">
                          <img src="image/image 4.png" alt="">
                          <h2>Oumar</h2>
@@ -35,22 +37,22 @@
                                     <a href="#section-contact">contact</a>
                                </div>
                            </ul>
-                            <button class="boutton-bar-ferme"><i class="fa-solid fa-xmark"></i></button>
+                           <button class="boutton-bar-ferme"><i class="fa-solid fa-xmark"></i></button>
                      </nav>
-                    <button class="boutton-bar" id="voir-cv"><i class="fa-solid fa-bars"></i></button>
+                     <button class="boutton-bar"><i class="fa-solid fa-bars"></i></button>
              </header>
 
              <!-- le abaout -->
 
-             <div class="contenaire-accueil">
-                    <div class="accueil-texte">
+             <div class="contenaire-accueil" >
+                    <div class="accueil-texte" data-aos="fade-up">
                            <h3>bienvenue dans mon monde  <i class="fa-solid fa-star"></i></h3>
                            <h2>Hi 👋, je suis Oumar <span>djibrilla</span>  <br> et le code c'est ma passion</h2>
                            <p>
                                Actuellement un développeur web junior à la recherche d’un stage pré-embauche pour mettre mes compétences en pratique et contribuer à des projets concrets.
                            </p>
                            <div class="accueil-text-boutton">
-                               <a href="#" class="boutton-voir-cv">mon cv </a>
+                               <a href="#" class="boutton-voir-cv" id="voir-cv">mon cv </a>
                            </div>
                            <div class="card-reseaux">
                                     <div class="div-reseaux">
@@ -72,7 +74,7 @@
                                     </div>
                            </div>
                     </div>
-                    <div class="accueil-photo">
+                    <div class="accueil-photo" data-aos="fade-left">
                         <img src="image/image 1.png" alt="">
                     </div>
              </div>
@@ -84,9 +86,9 @@
 
       <section class="section-apropos" id="section-apropos">
               
-             <div class="apropos-photo"><img src="image/image 4.png" alt=""></div>
+             <div class="apropos-photo" data-aos="fade-up-right"><img src="image/image 4.png" alt=""></div>
 
-             <div class="apropos-text">
+             <div class="apropos-text" data-aos="zoom-in-up">
                     <h2>qui suis je ?</h2>
                     <p>
                         je m’appelle Oumar Djibrilla, développeur web junior passionné par la création de sites modernes et fonctionnels.
@@ -116,35 +118,35 @@
       <!-- mes competence -->
 
       <section class="section-competence" id="section-competence">
-                    <div class="competence-titre">
+                    <div class="competence-titre" data-aos="zoom-in-up">
                          <h2>mes competences</h2>
                          <p>voici mes competences</p>
                     </div>
 
-                    <div class="contenaire-competences">
+                    <div class="contenaire-competences" >
                           <div class="card-competences">
-                              <div class="div-card-competences">
+                              <div class="div-card-competences" data-aos="zoom-in" data-aos-delay="100">
                                     <p>java script</p>
                                     <progress value="30" max="80"></progress>
                               </div>
-                              <div class="div-card-competences">
+                              <div class="div-card-competences" data-aos="zoom-in" data-aos-delay="200">
                                     <p>php</p>
                                     <progress value="30" max="45"></progress>
                               </div>
-                              <div class="div-card-competences">
+                              <div class="div-card-competences" data-aos="zoom-in" data-aos-delay="300">
                                     <p>laravel</p>
                                     <progress value="30" max="60"></progress>
                               </div>
-                               <div class="div-card-competences">
+                               <div class="div-card-competences" data-aos="zoom-in" data-aos-delay="400">
                                    <p>mysqli</p>
                                    <progress value="30" max="40"></progress>
                               </div>
                           </div>
-                          <div class="autre-card-competences">
-                                <div class="autre-competence"><i class="fa-brands fa-html5"></i> html</div>
-                                <div class="autre-competence"> <i class="fa-brands fa-css"></i> css</div>
-                                <div class="autre-competence"> <i class="fa-solid fa-database"></i>merise</div>
-                                <div class="autre-competence"><i class="fa-solid fa-project-diagram"></i> uml</div>
+                          <div class="autre-card-competences" >
+                                <div class="autre-competence" data-aos="zoom-in" data-aos-delay="100"><i class="fa-brands fa-html5"></i> html</div>
+                                <div class="autre-competence" data-aos="zoom-in" data-aos-delay="200"> <i class="fa-brands fa-css"></i> css</div>
+                                <div class="autre-competence" data-aos="zoom-in" data-aos-delay="300"> <i class="fa-solid fa-database"></i>merise</div>
+                                <div class="autre-competence" data-aos="zoom-in" data-aos-delay="400"><i class="fa-solid fa-project-diagram"></i> uml</div>
                           </div>
                     </div>
       </section>
@@ -152,40 +154,40 @@
       <!-- la section pour mes projet realiser  -->
 
       <section class="section-projet" id="section-projet">
-                <div class="projet-titre">
+                <div class="projet-titre" data-aos="zoom-in-up">
                          <h2>mes realisation</h2>
                          <p>voici quelques unes de mes oeuvres</p>
                 </div>
                 <div class="contenaire-projet">
-                       <a href="https://oumardjibrilla.github.io/restaurant/" class="projet">
+                       <a href="https://oumardjibrilla.github.io/restaurant/" class="projet"  data-aos="fade-right">
                              <div class="div-projet">
                                  <img src="image/restaurant-photo.JPG" alt="">
                                  <progress value="50" max="60"></progress>
                              </div>
                              <p>restaurant pizza</p>
                         </a>
-                        <a href="https://emplois-production.up.railway.app/" class="projet">
+                        <a href="https://emplois-production.up.railway.app/" class="projet" data-aos="fade-down" data-aos-delay="200">
                              <div class="div-projet">
-                                 <img src="image/offre-photo.jpg" alt="">
+                                 <img src="image/offre-photo.jpg" alt="" data-aos="fade-down">
                                 <progress value="50" max="120"></progress>
                              </div>
                              <p>recherche d'emploi</p>
                         </a>
-                       <a href="" class="projet">
+                       <a href="" class="projet" data-aos="fade-left" data-aos-delay="300">
                              <div class="div-projet">
                                  <img src="" alt="">
                                  <progress value="50" max="100"></progress>
                              </div>
-                             <p> projet 3</p>
+                             <p> Dabori</p>
                         </a>
-                       <a href="" class="projet">
+                       <a href="" class="projet"  data-aos="fade-up" data-aos-delay="400">
                              <div class="div-projet">
                                  <img src="image/casque-photo.JPG" alt="">
                                  <progress value="50" max="100"></progress>
                              </div>
                              <p> techno casques</p>
                         </a>
-                        <a href="https://oumardjibrilla.github.io/restaurant2/" class="projet">
+                        <a href="https://oumardjibrilla.github.io/restaurant2/" class="projet" data-aos="fade-up" data-aos-delay="500">
                              <div class="div-projet">
                                  <img src="image/restaurant 2.JPG" alt="">
                                  <progress value="50" max="60"></progress>
@@ -198,7 +200,7 @@
 
       <!-- la section contact -->
 
-      <section class="section-contact" id="section-contact">
+      <section class="section-contact" id="section-contact"  data-aos="zoom-in">
                 <div class="div-section-contact">
                      <div class="div-section-contact-text">
                             <h2>contact</h2>
@@ -228,7 +230,6 @@
                 </div>
                 
       </section>
-
       <footer>
              <div class="div-footer">
                     <p>oumardjibrilla18@gmal.com</p>
@@ -236,5 +237,9 @@
              </div>
       </footer>
       <script src="index.js"></script>
+      <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+      <script>
+          AOS.init();
+      </script>
 </body>
 </html>
