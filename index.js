@@ -73,7 +73,7 @@ boutton_mail.addEventListener('click', ()=>{
 /* le code pour afficher mon cv  */
 
 
-const voir_cv = document.querySelector('.boutton-voir-cv')
+const voir_cv = document.querySelector('.lien-telechargement-cv')
 
 voir_cv.addEventListener('click' ,()=>{
     window.open('mon_cv.pdf' ,'_blank')

@@ -1,16 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>portfolio</title>
+    <title>Portfolio - Oumar Djibrilla</title>
     <link rel="stylesheet" href="index.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- pour le aos -->
-      <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> 
-    <script type="text/javascript"
-        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
-    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> 
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script type="text/javascript">
         (function(){
             emailjs.init({
@@ -20,225 +17,296 @@
     </script>
 </head>
 <body>
-      <section class="accueil-section" id="accueil-section">
 
-             <header>
-                     <div class="header-titre">
-                         <img src="image/image 4.png" alt="">
-                         <h2>Oumar</h2>
-                     </div>
-                     <nav>
-                           <ul>
-                               <li><a href="#">accueil</a></li>
-                               <li><a href="#section-apropos">a propos</a></li>
-                               <li><a href="#section-competence">mes competences</a></li>
-                               <li><a href="#section-projet">mes projets</a></li>
-                               <div class="nav-contact">
-                                    <a href="#section-contact">contact</a>
-                               </div>
-                           </ul>
-                            <button class="boutton-bar-ferme"><i class="fa-solid fa-xmark"></i></button>
-                     </nav>
-                  <button class="boutton-bar"><i class="fa-solid fa-bars"></i></button>
-             </header>
+    <!-- Header / Barre de navigation -->
+    <header>
+        <div class="header-logo">
+            <div class="logo-cercle">OD</div>
+            <h2>Oumar</h2>
+        </div>
+        
+        <button class="boutton-bar"><span class="barre-ligne"></span><span class="barre-ligne"></span></button>
+        
+        <nav class="nav-menu-central">
+            <button class="boutton-bar-ferme"><i class="fa-solid fa-xmark"></i></button>
+            <div class="nav-mobile-decor"></div>
+            <ul>
+                <li><a href="#" class="active">Accueil</a></li>
+                <li><a href="#section-apropos">À Propos</a></li>
+                <li><a href="#section-competence">Compétences</a></li>
+                <li><a href="#section-projet">Projets</a></li>
+                <li><a href="#section-contact">Contact</a></li>
+            </ul>
+        </nav>
 
-             <!-- le abaout -->
+        <div class="header-contact-btn">
+            <a href="#section-contact">Contact</a>
+        </div>
+    </header>
 
-             <div class="contenaire-accueil" >
-                    <div class="accueil-texte">
-                           <h3 data-aos="zoom-in">bienvenue dans mon monde  <i class="fa-solid fa-star"></i></h3>
-                           <h2 data-aos="zoom-in">Hi 👋, je suis Oumar <span>djibrilla</span>  <br> et le code c'est ma passion</h2>
-                           <p data-aos="zoom-in">
-                               Actuellement un développeur web junior à la recherche d’un stage pré-embauche pour mettre mes compétences en pratique et contribuer à des projets concrets.
-                           </p>
-                           <div class="accueil-text-boutton">
-                               <a href="#" class="boutton-voir-cv" data-aos="zoom-in">mon cv </a>
-                           </div>
-                           <div class="card-reseaux" data-aos="zoom-in">
-                                    <div class="div-reseaux">
-                                          <h4 >Mes réseaux</h4>
-                                          <span >
-                                                <a href="#"><i class="fa-brands fa-whatsapp"></i></i></a>
-                                                <a href="#"><i class="fa-brands fa-youtube"></i></a>
-                                                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-                                          </span>
-                                    </div>
-                                    <i class="fa-solid fa-star"></i>
-                                    <div class="div-reseaux" data-aos="zoom-in">
-                                          <h4>Au quotidien</h4>
-                                          <span>
-                                                <a href="#"><i class="fa-brands fa-github"></i></a>
-                                                <a href="#"><i class="fa-brands fa-youtube"></i></i></a>
-                                                <a href="#"><i class="fa-solid fa-code"></i> </a>
-                                          </span>
-                                    </div>
-                           </div>
-                    </div>
-                    <div class="accueil-photo">
-                        <img data-aos="zoom-in" src="image/image 1.png" alt="">
-                    </div>
-             </div>
-             
-      </section>
-
-
-      <!-- la section pour le apropos -->
-
-      <section class="section-apropos" id="section-apropos">
-              
-             <div class="apropos-photo" ><img src="image/image 4.png"  alt=""></div>
-
-             <div class="apropos-text" >
-                    <h2 data-aos="zoom-in">qui suis je ?</h2>
-                    <p data-aos="zoom-in">
-                        je m’appelle Oumar Djibrilla, développeur web junior passionné par la création de sites modernes et fonctionnels.
-                        Persévérant, curieux et enthousiaste, j’adore relever de nouveaux défis et apprendre constamment.
-                        je cherche un stage pré-embauche pour transformer ma passion en expérience concrète et évoluer au contact d’une équipe professionnelle.
-                    </p>
-                    <div class="apropos-personnelle">
-                          <h3 data-aos="zoom-in">? mes information personnelles</h3>
-                          <div class="div-apropos-personnelle">
-                              <div class="info" data-aos="fade-right">
-                                    <p class="p1"><i class="fa-solid fa-phone"></i></p>
-                                    <p class="p2">+212 774454921</p>
-                              </div>
-                              <div class="info" data-aos="fade-left">
-                                    <p class="p1"><i class="fa-solid fa-envelope"></i></p>
-                                    <p class="p2">oumardjibrilla18@gmail.com</p>
-                              </div>
-                              <div class="info" data-aos="fade-right">
-                                    <p class="p1"><i class="fa-solid fa-location-dot"></i></p>
-                                    <p class="p2">doha tabrique</p>
-                              </div>
-                          </div>
-                    </div>
-             </div>
-      </section>
-
-      <!-- mes competence -->
-
-      <section class="section-competence" id="section-competence">
-                    <div class="competence-titre" data-aos="zoom-in">
-                         <h2>mes competences</h2>
-                         <p>voici mes competences</p>
-                    </div>
-                    <div class="contenaire-competences">
-                          <div class="card-competences">
-                              <div class="div-card-competences" data-aos="fade-right">
-                                    <p>java script</p>
-                                    <progress value="30" max="80"></progress>
-                              </div>
-                              <div class="div-card-competences" data-aos="fade-right">
-                                    <p>php</p>
-                                    <progress value="30" max="45"></progress>
-                              </div>
-                              <div class="div-card-competences" data-aos="fade-right">
-                                    <p>laravel</p>
-                                    <progress value="30" max="60"></progress>
-                              </div>
-                               <div class="div-card-competences" data-aos="fade-right" >
-                                   <p>mysqli</p>
-                                   <progress value="30" max="40"></progress>
-                              </div>
-                          </div>
-                          <div class="autre-card-competences" >
-                                <div class="autre-competence" data-aos="fade-up-right"><i class="fa-brands fa-html5"></i> html</div>
-                                <div class="autre-competence" data-aos="fade-up-left">  <i class="fa-brands fa-css"></i> css</div>
-                                <div class="autre-competence" data-aos="fade-up-right"> <i class="fa-solid fa-database"></i>merise</div>
-                                <div class="autre-competence" data-aos="fade-up-left"><i class="fa-solid fa-project-diagram"></i> uml</div>
-                          </div>
-                    </div>
-      </section>
-
-      <!-- la section pour mes projet realiser  -->
-
-      <section class="section-projet" id="section-projet">
-                <div class="projet-titre" data-aos="zoom-in">
-                         <h2>mes realisation</h2>
-                         <p>voici quelques unes de mes oeuvres</p>
-                </div>
-                <div class="contenaire-projet">
-                       <a href="https://oumardjibrilla.github.io/restaurant/" class="projet"  data-aos="fade-right">
-                             <div class="div-projet">
-                                 <img src="image/restaurant-photo.JPG" alt="">
-                                 <progress value="50" max="60"></progress>
-                             </div>
-                             <p>restaurant pizza</p>
-                        </a>
-                        <a href="https://emplois-production.up.railway.app/" class="projet" data-aos="fade-down" data-aos-delay="200">
-                             <div class="div-projet">
-                                 <img src="image/offre-photo.jpg" alt="" data-aos="fade-down">
-                                <progress value="50" max="120"></progress>
-                             </div>
-                             <p>recherche d'emploi</p>
-                        </a>
-                       <a href="" class="projet" data-aos="fade-left" data-aos-delay="300">
-                             <div class="div-projet">
-                                 <img src="image/dabori.JPG" alt="">
-                                 <progress value="50" max="100"></progress>
-                             </div>
-                             <p> Dabori</p>
-                        </a>
-                       <a href="https://oumardjibrilla.github.io/todo-liste/" class="projet"  data-aos="fade-up" data-aos-delay="400">
-                             <div class="div-projet">
-                                 <img src="image/todo.jpg" alt="">
-                                 <progress value="50" max="100"></progress>
-                             </div>
-                             <p> to-do liste </p>
-                        </a>
-                        <a href="https://oumardjibrilla.github.io/restaurant2/" class="projet" data-aos="fade-up" data-aos-delay="500">
-                             <div class="div-projet">
-                                 <img src="image/restaurant 2.JPG" alt="">
-                                 <progress value="50" max="60"></progress>
-                             </div>
-                             <p>restaurant</p>
-                        </a>
-                </div>
-      </section>
-
-
-      <!-- la section contact -->
-
-      <section class="section-contact" id="section-contact">
-                <div class="div-section-contact">
-                     <div class="div-section-contact-text">
-                            <h2 data-aos="zoom-in">contact</h2>
-                            <h4 data-aos="zoom-in"> vous avez besoin de renfort dans votre equipe ?</h4>
-                            <p data-aos="zoom-in">
-                                je suis a la recherche d'un stage pre embauche pour mettre mes competences en pretique
-                            </p>
-                            <div class="contact-reseaux">
-                                <a href="mailto:oumardjibrilla18@gmail.com" data-aos="zoom-in"><i class="fa-solid fa-envelope"></i></a>
-                                <a href="" data-aos="zoom-in"><i class="fa-brands fa-whatsapp"></i></a>
-                          </div>
-                     </div>
-                     <form action="" data-aos="zoom-in">
-                             <div class="div-form">
-                                     <label for="email">email</label>
-                                     <input type="email" required name="email" id="email">
-                             </div>
-                              <div class="div-form">
-                                     <label for="sujet">sujet</label>
-                                     <input type="text" required name="sujet" id="sujet">
-                             </div>
-                              <div class="div-form">
-                                    <textarea name="message" id="message" placeholder="write your message"></textarea>
-                             </div>
-                             <button type="button" class="form-boutton" id="boutton-mail">envoyer</button>
-                     </form>
+    <!-- Section Accueil -->
+    <section class="accueil-section" id="accueil-section">
+        <div class="conteneur-split-asymetrique">
+            
+            <div class="split-gauche-texte" data-aos="fade-right">
+                <div class="enveloppe-titre-geant">
+                    <h1 class="prenom-statut">OUMAR</h1>
+                    <h2 class="nom-slogan">Djibrilla<span class="point-rouge">.</span></h2>
                 </div>
                 
-      </section>
-      <footer>
-             <div class="div-footer">
-                    <p>oumardjibrilla18@gmal.com</p>
-                    <a href="#accueil-section"><i class="fa-solid fa-arrow-up"></i></a>
-             </div>
-      </footer>
-      <script src="index.js"></script>
-      <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-      <script>
-          AOS.init();
-      </script>
+                <div class="bloc-description-decalee">
+                    <div class="barre-accent-verticale"></div>
+                    <div class="texte-presentation">
+                        <h3>Développeur Web Junior</h3>
+                        <p>
+                            Actuellement à la recherche d’un stage pré-embauche pour concevoir des 
+                            interfaces poussées et bousculer les codes du web classique.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="actions-bouttons-alternatifs">
+                    <a href="#" class="lien-telechargement-cv" >
+                        <span class="cercle-fleche"><i class="fa-solid fa-arrow-down"></i></span>
+                        <span class="label-cv">Prendre mon CV</span>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="split-droite-visuel" data-aos="fade-left" data-aos-delay="200">
+                <div class="structure-image-architecture">
+                    <div class="masque-image-premium">
+                        <img src="/image/image 1.png" alt="Oumar Djibrilla">
+                    </div>
+                    
+                    <div class="badge-flottant-futur">
+                        <span class="pulsation-statut"></span>
+                        <p>Disponible Stage</p>
+                    </div>
+
+                    <div class="panneau-icones-abstrait">
+                        <a href="#" class="icone-carte"><i class="fa-brands fa-whatsapp"></i></a>
+                        <a href="#" class="icone-carte"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="#" class="icone-carte"><i class="fa-brands fa-github"></i></a>
+                        <a href="#" class="icone-carte"><i class="fa-solid fa-terminal"></i></a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Section À Propos -->
+    <section class="section-apropos" id="section-apropos">
+        <div class="apropos-contenu" data-aos="fade-up">
+            <div class="section-titre-global">
+                <h2>Qui <span class="outline-tech">suis-je ?</span></h2>
+            </div>
+            
+            <div class="apropos-bio">
+                <p>Je m’appelle Oumar Djibrilla, développeur web junior passionné par la création de sites modernes, performants et fonctionnels. Persévérant, curieux et enthousiaste, j’adore relever de nouveaux défis techniques. Je cherche à rejoindre une équipe professionnelle pour transformer ma passion en valeur ajoutée concrète.</p>
+            </div>
+
+            <div class="apropos-infos-horizontale">
+                <div class="info-item" data-aos="zoom-in" data-aos-delay="100">
+                    <span class="icon-wrap"><i class="fa-solid fa-phone"></i></span>
+                    <div class="info-txt">
+                        <label>Téléphone</label>
+                        <p>+212 774454921</p>
+                    </div>
+                </div>
+                <div class="info-item" data-aos="zoom-in" data-aos-delay="200">
+                    <span class="icon-wrap"><i class="fa-solid fa-envelope"></i></span>
+                    <div class="info-txt">
+                        <label>Email</label>
+                        <p>oumardjibrilla18@gmail.com</p>
+                    </div>
+                </div>
+                <div class="info-item" data-aos="zoom-in" data-aos-delay="300">
+                    <span class="icon-wrap"><i class="fa-solid fa-location-dot"></i></span>
+                    <div class="info-txt">
+                        <label>Localisation</label>
+                        <p>Doha Tabrique, Maroc</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Compétences -->
+    <section class="section-competence" id="section-competence">
+        <div class="section-titre-global" data-aos="fade-up">
+            <h2>Mes <span class="outline-tech">Compétences</span></h2>
+        </div>
+        <div class="competence-layout-split">  
+            <!-- Partie Gauche -->
+            <div class="competence-intro-cyber" data-aos="fade-right">
+                <div class="section-titre-global no-center">
+                    <h2>Mes <br><span class="outline-tech">Technologies</span></h2>
+                </div>
+                <p>Mon environnement de développement se concentre sur la robustesse du backend et la fluidité de l'expérience utilisateur.</p>
+                <div class="stat-box-speciale">
+                    <span class="grand-nombre">04</span>
+                    <p>Piliers technologiques pour concevoir des applications web scalables.</p>
+                </div>
+            </div>
+
+            <!-- Partie Droite (Icônes intégrées dans les spans cyber-index) -->
+            <div class="competence-grille-cyber">
+                
+                <!-- Techno 1 -->
+                <div class="bloc-tech-cyber" data-aos="fade-up" data-aos-delay="100">
+                    <div class="cyber-header-card">
+                        <span class="cyber-code">JS </span>
+                        <span class="cyber-index"><i class="fa-brands fa-js"></i></span>
+                    </div>
+                    <h3>JavaScript</h3>
+                    <div class="cyber-indicateur-container">
+                        <div class="cyber-led active"></div>
+                        <div class="cyber-led active"></div>
+                        <div class="cyber-led active"></div>
+                        <div class="cyber-led"></div>
+                        <span class="cyber-pourcent">65%</span>
+                    </div>
+                </div>
+
+                <!-- Techno 2 -->
+                <div class="bloc-tech-cyber" data-aos="fade-up" data-aos-delay="200">
+                    <div class="cyber-header-card">
+                        <span class="cyber-code">PHP</span>
+                        <span class="cyber-index"><i class="fa-brands fa-php"></i></span>
+                    </div>
+                    <h3>PHP </h3>
+                    <div class="cyber-indicateur-container">
+                        <div class="cyber-led active"></div>
+                        <div class="cyber-led active"></div>
+                        <div class="cyber-led active"></div>
+                        <div class="cyber-led active"></div>
+                        <span class="cyber-pourcent">70%</span>
+                    </div>
+                </div>
+
+                <!-- Techno 3 -->
+                <div class="bloc-tech-cyber" data-aos="fade-up" data-aos-delay="300">
+                    <div class="cyber-header-card">
+                        <span class="cyber-code">MVC</span>
+                        <span class="cyber-index"><i class="fa-brands fa-laravel"></i></span>
+                    </div>
+                    <h3>Laravel</h3>
+                    <div class="cyber-indicateur-container">
+                        <div class="cyber-led active"></div>
+                        <div class="cyber-led active"></div>
+                        <div class="cyber-led active"></div>
+                        <div class="cyber-led"></div>
+                        <span class="cyber-pourcent">60%</span>
+                    </div>
+                </div>
+
+                <!-- Techno 4 -->
+                <div class="bloc-tech-cyber" data-aos="fade-up" data-aos-delay="400">
+                    <div class="cyber-header-card">
+                        <span class="cyber-code">SQL </span>
+                        <span class="cyber-index"><i class="fa-solid fa-database"></i></span>
+                    </div>
+                    <h3>MySQL</h3>
+                    <div class="cyber-indicateur-container">
+                        <div class="cyber-led active"></div>
+                        <div class="cyber-led active"></div>
+                        <div class="cyber-led active"></div>
+                        <div class="cyber-led "></div>
+                        <span class="cyber-pourcent">75%</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Rideau de compétences secondaires aligné horizontalement et stylisé -->
+        <div class="ruban-competences-satellites" data-aos="fade-up" data-aos-delay="200">
+            <div class="satellite-item"><i class="fa-brands fa-html5"></i> <span>HTML5</span></div>
+            <div class="satellite-item"><i class="fa-brands fa-css3-alt"></i> <span>CSS3 </span></div>
+            <div class="satellite-item"><i class="fa-solid fa-diagram-project"></i> <span>Merise / UML</span></div>
+            <div class="satellite-item"><i class="fa-brands fa-git-alt"></i> <span>Git </span></div>
+        </div>
+    </section>
+
+    <!-- Section Réalisations -->
+    <section class="section-projet" id="section-projet">
+        <div class="section-titre-global" data-aos="fade-up">
+            <h2>Mes <span class="outline-tech">Réalisations</span></h2>
+        </div>
+        
+        <div class="contenaire-projet">
+            <a href="https://oumardjibrilla.github.io/restaurant/" target="_blank" class="projet" data-aos="zoom-in" data-aos-delay="100">
+                <div class="div-projet"><img src="image/restaurant-photo.JPG" alt="Project Pizza"></div>
+                <p>Restaurant Pizza</p>
+            </a>
+            <a href="https://oumardjibrilla.github.io/restaurant/" target="_blank" class="projet" data-aos="zoom-in" data-aos-delay="100">
+                <div class="div-projet"><img src="image/restaurant-photo.JPG" alt="Project Pizza"></div>
+                <p>Restaurant Pizza</p>
+            </a>
+            <a href="https://oumardjibrilla.github.io/restaurant/" target="_blank" class="projet" data-aos="zoom-in" data-aos-delay="100">
+                <div class="div-projet"><img src="image/restaurant-photo.JPG" alt="Project Pizza"></div>
+                <p>Restaurant Pizza</p>
+            </a>
+            <a href="https://emplois-production.up.railway.app/" target="_blank" class="projet" data-aos="zoom-in" data-aos-delay="200">
+                <div class="div-projet"><img src="image/offre-photo.jpg" alt="Plateforme emploi"></div>
+                <p>Recherche d'Emploi</p>
+            </a>
+            <a href="https://github.com/oumardjibrilla" target="_blank" class="projet" data-aos="zoom-in" data-aos-delay="300">
+                <div class="div-projet"><img src="image/dabori.JPG" alt="Dabori"></div>
+                <p>Dabori (GitHub)</p>
+            </a>
+            <a href="https://oumardjibrilla.github.io/todo-liste/" target="_blank" class="projet" data-aos="zoom-in" data-aos-delay="400">
+                <div class="div-projet"><img src="image/todo.jpg" alt="Todo List"></div>
+                <p>To-Do List</p>
+            </a>
+        </div>
+    </section>
+
+    <!-- Section Contact -->
+    <section class="section-contact" id="section-contact">
+        <div class="div-section-contact" data-aos="fade-up">
+            <div class="div-section-contact-text" data-aos="fade-right" data-aos-delay="100">
+                <div class="section-titre-global no-center">
+                    <h2>Me <span class="outline-tech">Contacter</span></h2>
+                </div>
+                <h4>Besoin de renfort dans votre équipe ?</h4>
+                <p>Je suis activement à la recherche d'un stage pré-embauche. N'hésitez pas à m'envoyer un message directement via le formulaire ou sur mes plateformes !</p>
+                <div class="contact-reseaux">
+                    <a href="mailto:oumardjibrilla18@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+                    <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+            </div>
+            
+            <form action="#" data-aos="fade-left" data-aos-delay="200">
+                <div class="div-form">
+                    <label for="email">Votre Email</label>
+                    <input type="email" required id="email">
+                </div>
+                <div class="div-form">
+                    <label for="sujet">Sujet</label>
+                    <input type="text" required id="sujet">
+                </div>
+                <div class="div-form">
+                    <label for="message">Message</label>
+                    <textarea id="message" required placeholder="Écrivez votre message ici..."></textarea>
+                </div>
+                <button type="button" class="form-boutton" id="boutton-mail">Envoyer le message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="div-footer">
+            <p>&copy; 2026 Oumar Djibrilla.</p>
+            <p>oumardjibrilla18@gmail.com</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init({ duration: 900, once: true });</script>
+    <script src="index.js"></script>
 </body>
 </html>
