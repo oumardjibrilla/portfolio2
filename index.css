@@ -544,7 +544,9 @@ header {
 .div-projet img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
 .projet:hover .div-projet img { transform: scale(1.05); }
 .projet p { padding: 20px; font-size: 15px; font-weight: 600; color: var(--text-white); text-align: center; }
-
+.swipe-hint{
+    display:none;
+}
 /* ==========================================================================
    SECTION CONTACT
    ========================================================================== */
@@ -568,19 +570,40 @@ footer { padding: 30px 5%; border-top: 1px solid #1a1a1a; }
 /* ==========================================================================
    VERSION MOBILE HIGH-END RESPONSIVE
    ========================================================================== */
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media (max-width: 1024px) {
+    section {
+        padding: 90px 5% 45px 5%;
+    }
+
+    /* --- NAVIGATION MOBILE CYBER TRACÉE --- */
     .boutton-bar {
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
-        width: 28px;
-        height: 14px;
-        background: none;
-        border: none;
+        justify-content: center;
+        gap: 6px;
+        width: 32px;
+        height: 32px;
+        background: rgba(255, 255, 255, 0.02);
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        border-radius: 8px;
         cursor: pointer;
+        padding: 6px;
     }
     .barre-ligne { width: 100%; height: 2px; background-color: var(--text-white); transition: 0.3s; }
-    .boutton-bar .barre-ligne:last-child { width: 70%; align-self: flex-end; }
+    .boutton-bar .barre-ligne:last-child { width: 60%; align-self: flex-end; }
 
     .nav-menu-central {
         display: none;
@@ -589,60 +612,237 @@ footer { padding: 30px 5%; border-top: 1px solid #1a1a1a; }
         left: 0;
         width: 100vw;
         height: 100vh;
-        background: #060606;
+        background: rgba(6, 6, 6, 0.94);
+        backdrop-filter: blur(25px);
+        -webkit-backdrop-filter: blur(25px);
         z-index: 2000;
-        padding: 60px 40px;
+        padding: 50px 30px;
         flex-direction: column;
         justify-content: center;
         border-radius: 0;
         border: none;
     }
-    .boutton-bar-ferme { display: block; position: absolute; top: 30px; right: 40px; background: none; border: none; color: white; font-size: 28px; }
-    .nav-mobile-decor { display: block; font-family: monospace; font-size: 12px; color: var(--color-primary); letter-spacing: 5px; margin-bottom: 40px; }
-    .nav-menu-central ul { flex-direction: column; align-items: flex-start; gap: 30px; width: 100%; }
-    .nav-menu-central ul li { width: 100%; border-bottom: 1px solid rgba(255,255,255,0.03); padding-bottom: 15px; }
-    .nav-menu-central ul li a { font-size: 32px; font-weight: 800; padding: 0; color: rgba(255,255,255,0.4); }
-    .nav-menu-central ul li a.active, .nav-menu-central ul li a:hover { color: var(--text-white); background: none; }
+    
+    .boutton-bar-ferme { 
+        display: block; 
+        position: absolute; 
+        top: 30px; 
+        right: 30px; 
+        background: rgba(255,0,0,0.1); 
+        border: 1px solid rgba(255,0,0,0.2); 
+        color: var(--color-primary); 
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        font-size: 20px; 
+    }
+    
+    .nav-mobile-decor { 
+        display: block; 
+        font-family: monospace; 
+        font-size: 11px; 
+        color: var(--color-primary); 
+        letter-spacing: 4px; 
+        margin-bottom: 40px; 
+        border-left: 2px solid var(--color-primary);
+        padding-left: 10px;
+        opacity: 0.7;
+    }
+    
+    .nav-menu-central ul { flex-direction: column; align-items: flex-start; gap: 24px; width: 100%; }
+    .nav-menu-central ul li { width: 100%; }
+    
+    .nav-menu-central ul li a { 
+        font-size: 28px; 
+        font-weight: 800; 
+        padding: 10px 0; 
+        color: rgba(255,255,255,0.3); 
+        display: block;
+        letter-spacing: -1px;
+        border-bottom: 1px solid rgba(255,255,255,0.03);
+    }
+    .nav-menu-central ul li a span {
+        font-family: monospace;
+        font-size: 14px;
+        color: var(--color-accent);
+        margin-right: 10px;
+    }
+    .nav-menu-central ul li a.active, .nav-menu-central ul li a:hover { 
+        color: var(--text-white); 
+        background: none; 
+        border-bottom-color: var(--color-primary);
+    }
     .header-contact-btn { display: none; }
 
-    .conteneur-split-asymetrique { flex-direction: column; gap: 60px; text-align: left; }
+    /* --- ACCUEIL IMMERSIF SPLIT --- */
+    .conteneur-split-asymetrique { 
+        flex-direction: column; 
+        gap: 45px; 
+        align-items: flex-start; 
+    }
     .split-gauche-texte, .split-droite-visuel { width: 100%; }
-    .prenom-statut { font-size: 18vw; letter-spacing: -3px; line-height: 0.9; margin-bottom: 5px; }
-    .nom-slogan { font-size: 10vw; letter-spacing: -1px; }
-    .bloc-description-decalee { gap: 15px; margin-bottom: 30px; }
     
-    .structure-image-architecture { width: 100%; max-width: 300px; height: 380px; margin: 0; }
-    .badge-flottant-futur { left: auto; right: -20px; top: -15px; }
-    .panneau-icones-abstrait { position: relative; flex-direction: row; gap: 15px; margin-top: 35px; right: auto; bottom: auto; justify-content: flex-start; }
-    .icone-carte { width: 50px; height: 50px; border-radius: 16px; }
+    /* Typographie Clamp pour éviter le chevauchement sauvage */
+    .prenom-statut { 
+        font-size: clamp(48px, 14vw, 85px); 
+        letter-spacing: -2px; 
+        line-height: 0.85; 
+        margin-bottom: 8px; 
+    }
+    .nom-slogan { font-size: clamp(32px, 9vw, 55px); letter-spacing: -1px; }
+    
+    .bloc-description-decalee { gap: 16px; margin-bottom: 35px; }
 
-    /* Compétences Mobile Structuration */
-    .competence-layout-split { flex-direction: column; gap: 40px; }
-    .competence-grille-cyber { grid-template-columns: 1fr; gap: 16px; }
-    .competence-grille-cyber .bloc-tech-cyber:nth-child(even) { transform: none; border-left: 2px solid var(--color-primary); }
+    /* L'Image Devient Une Interface (HUD) */
+    .split-droite-visuel {
+        justify-content: center;
+        margin-top: 10px;
+    }
+    .structure-image-architecture { 
+        width: 100%; 
+        max-width: 310px; 
+        height: 380px; 
+        margin: 0 auto;
+    }
+    .masque-image-premium {
+        border-radius: 24px;
+        border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+    
+    .badge-flottant-futur { 
+        left: -15px; 
+        top: -15px; 
+        background: rgba(13, 13, 13, 0.85);
+        backdrop-filter: blur(8px);
+        padding: 8px 16px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    }
+
+    
+    /* --- À PROPOS : GRILLE ASYMÉTRIQUE COMPACTE --- */
+    .apropos-contenu { padding: 35px 24px; }
+    .apropos-infos-horizontale { 
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 12px; 
+    }
+    /* L'email prend toute la largeur pour éviter de casser le texte */
+    .info-item:nth-child(2) {
+        grid-column: span 2;
+    }
+    .info-item {
+        padding: 12px;
+        border-radius: 10px;
+        background: rgba(255, 255, 255, 0.02);
+    }
+    .icon-wrap { width: 34px; height: 34px; font-size: 14px; }
+    .info-txt p { font-size: 13px; }
+
+    /* --- COMPÉTENCES : LE TABLEAU DE BORD TACTILE (2X2) --- */
+    .competence-layout-split { flex-direction: column; gap: 35px; }
+    .competence-intro-cyber { max-width: 100%; }
+    
+    .competence-grille-cyber { 
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 14px; 
+    }
+    .competence-grille-cyber .bloc-tech-cyber:nth-child(even),
+    .competence-grille-cyber .bloc-tech-cyber:nth-child(odd) { 
+        transform: none !important; 
+        min-height: auto;
+        padding: 20px;
+        border: 1px solid rgba(255, 255, 255, 0.03);
+    }
+    
+    /* Petites touches de lumières asymétriques sur les angles des cartes */
+    .competence-grille-cyber .bloc-tech-cyber:nth-child(even) { border-right: 2px solid var(--color-primary); }
     .competence-grille-cyber .bloc-tech-cyber:nth-child(odd) { border-left: 2px solid var(--color-accent); }
+    
+    .bloc-tech-cyber h3 { font-size: 17px; margin-bottom: 20px; font-weight: 600; }
+    .cyber-index { width: 32px; height: 32px; font-size: 16px; border-radius: 8px; }
+    .cyber-led { width: 14px; height: 4px; }
+    .cyber-pourcent { font-size: 12px; }
 
-    /* Adaptation Mobile pour les compétences secondaires horizontales */
+    /* Mosaïque pour les compétences satellites */
     .ruban-competences-satellites {
-        flex-direction: column;
-        gap: 12px;
-        margin-top: 40px;
+        display: flex;
+        justify-content: space-around;
+        margin-top: 35px;
     }
     .satellite-item {
         width: 100%;
-        justify-content: flex-start;
-        padding: 15px 20px;
+        padding: 3px;
+        font-size: 13px;
+        justify-content: center;
     }
 
-    .div-section-contact { flex-direction: column; gap: 40px; }
+    /* --- PROJETS : CARROUSEL HORIZONTAL IMMERSIF (SWIPE) --- */
+    .section-projet { padding-right: 0 !important; } /* Permet au carrousel de toucher le bord de l'écran */
+    .section-projet .section-titre-global { padding-right: 5%; }
+    
+    .realisations-mobile-swiper {
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        padding-bottom: 20px;
+        padding-right: 5%;
+    }
+    .realisations-mobile-swiper::-webkit-scrollbar { display: none; } /* On cache la barre moche */
+    
+    .contenaire-projet {
+        display: flex;
+        grid-template-columns: none;
+        gap: 18px;
+        width: max-content;
+    }
+    
+    .projet {
+        width: 270px;
+        scroll-snap-align: center;
+        flex-shrink: 0;
+        background: linear-gradient(180deg, var(--bg-card) 0%, rgba(13,13,13,0.5) 100%);
+        border: 1px solid rgba(255, 255, 255, 0.04);
+    }
+    .div-projet { height: 160px; }
+    .projet p { padding: 16px; font-size: 14px; }
+    
+    /* Indicateur de swipe discret */
+    .swipe-hint {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        font-family: monospace;
+        font-size: 11px;
+        color: var(--text-gray);
+        margin-top: 10px;
+        padding-right: 5%;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+    .swipe-hint i {
+        color: var(--color-primary);
+        animation: pulseSwipe 1.5s infinite ease-in-out;
+    }
+    @keyframes pulseSwipe { 0%, 100% { transform: translateX(0); opacity: 0.4; } 50% { transform: translateX(4px); opacity: 1; } }
+
+    /* --- CONTACT & FORMULAIRE COMPACT --- */
+    .div-section-contact { 
+        flex-direction: column; 
+        gap: 35px; 
+        padding: 35px 20px;
+    }
     form, .div-section-contact-text { width: 100%; }
-    .apropos-infos-horizontale { grid-template-columns: 1fr; gap: 15px; }
-    .div-footer { flex-direction: column; gap: 15px; text-align: center; }
+    .div-section-contact-text p { margin-bottom: 20px; }
+    
+    .div-footer { 
+        flex-direction: column; 
+        gap: 12px; 
+        text-align: center; 
+    }
 }
 
 @media (max-width: 600px) {
-    section { padding: 80px 6% 40px 6%; }
-    .apropos-contenu, .div-section-contact { padding: 30px 20px; }
-    .form-boutton { padding: 16px; }
     .section-titre-global h2 { font-size: 28px; }
+    .stat-box-speciale { padding: 18px; }
+    .grand-nombre { font-size: 44px; }
 }
