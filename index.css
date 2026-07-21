@@ -130,8 +130,8 @@ header {
     transition: all 0.3s ease;
 }
 
-.nav-menu-central ul li a:hover, 
-.nav-menu-central ul li a.active {
+.nav-menu-central ul li a:hover
+{
     color: var(--text-white);
     background: rgba(255, 255, 255, 0.06);
 }
