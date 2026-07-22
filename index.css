@@ -726,13 +726,15 @@ footer { padding: 30px 5%; border-top: 1px solid #1a1a1a; }
         gap: 12px; 
     }
     /* L'email prend toute la largeur pour éviter de casser le texte */
-    .info-item:nth-child(2) {
+    /*.info-item:nth-child(2) {
         grid-column: span 2;
-    }
+        background-color:green;
+    } */
     .info-item {
         padding: 12px;
         border-radius: 10px;
         background: rgba(255, 255, 255, 0.02);
+        grid-column: span 2;
     }
     .icon-wrap { width: 34px; height: 34px; font-size: 14px; }
     .info-txt p { font-size: 13px; }
