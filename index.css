@@ -71,17 +71,19 @@ section {
    ========================================================================== */
 header {
     display: flex;
-    justify-content: space-between;
+    justify-content:space-between;
     align-items: center;
     width: 100%;
     height: 90px;
     padding: 0 5%;
-    position: sticky;
+    position: fixed;
+    left: 0;
+    right: 0;
     top: 0;
     background: rgba(6, 6, 6, 0.85);
     backdrop-filter: blur(16px);
     z-index: 1000;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.02);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.02);
 }
 
 .header-logo {
@@ -118,15 +120,15 @@ header {
 .nav-menu-central ul {
     display: flex;
     align-items: center;
-    gap: 2px;
+    gap: 15px;
 }
 
 .nav-menu-central ul li a {
     color: var(--text-gray);
-    font-size: 13.5px;
-    font-weight: 500;
-    padding: 8px 20px;
-    border-radius: 20px;
+    font-size: 14.5px;
+    font-weight: 600;
+    padding: 12px 24px;
+    border-radius: 22px;
     transition: all 0.3s ease;
 }
 
@@ -159,10 +161,10 @@ header {
    ACCUEIL : DESIGN SPLIT ASYMÉTRIQUE
    ========================================================================== */
 .accueil-section {
-    min-height: 85vh;
+    min-height: 100vh;
     display: flex;
     align-items: center;
-    padding-top: 40px;
+    justify-content: center;
 }
 
 .conteneur-split-asymetrique {
@@ -174,10 +176,10 @@ header {
 }
 
 .split-gauche-texte {
-    flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    gap: 10px;
 }
 
 .enveloppe-titre-geant {
@@ -193,7 +195,8 @@ header {
     color: transparent;
     -webkit-text-stroke: 1.5px rgba(255, 255, 255, 0.15);
     text-transform: uppercase;
-    margin-bottom: -10px;
+    margin-bottom: 20px;
+    margin-left:20px;
 }
 
 .nom-slogan {
@@ -203,12 +206,10 @@ header {
     letter-spacing: -2px;
 }
 
-.point-rouge { color: var(--color-primary); }
-
 .bloc-description-decalee {
     display: flex;
     gap: 25px;
-    max-width: 480px;
+    max-width: 660px;
     margin-bottom: 40px;
 }
 
@@ -265,11 +266,7 @@ header {
 }
 
 .split-droite-visuel {
-    position: relative;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    width: 40%;
+
 }
 
 .structure-image-architecture {
@@ -283,7 +280,6 @@ header {
     height: 100%;
     border-radius: 30px;
     overflow: hidden;
-    box-shadow: 0 40px 80px rgba(0, 0, 0, 0.6);
 }
 
 .masque-image-premium img {
@@ -298,26 +294,21 @@ header {
     top: 40px;
     left: -40px;
     background: var(--bg-card);
-    border: 1px solid #222222;
-    padding: 10px 20px;
+    border: 2px solid #222222;
+    padding: 12px 22px;
     border-radius: 40px;
     display: flex;
     align-items: center;
-    gap: 10px;
-    z-index: 10;
+    gap: 15px;
+    z-index: 10; 
 }
 
 .pulsation-statut {
     width: 8px;
     height: 8px;
-    background-color: #00ff66;
     border-radius: 50%;
     animation: flash 1.8s infinite;
 }
-
-@keyframes flash { 0%, 100% { opacity: 0.4; } 50% { opacity: 1; } }
-
-.badge-flottant-futur p { font-size: 11px; font-weight: 700; text-transform: uppercase; }
 
 .panneau-icones-abstrait {
     position: absolute;
@@ -333,7 +324,7 @@ header {
     width: 46px;
     height: 46px;
     background: var(--bg-card-elevated);
-    border: 1px solid #222222;
+    border: 2px solid #222222;
     color: var(--text-white);
     border-radius: 14px;
     display: flex;
@@ -353,31 +344,37 @@ header {
    SECTION À PROPOS
    ========================================================================== */
 .apropos-contenu {
-    background: var(--bg-card);
-    padding: 45px;
+    padding: 25px;
     border-radius: 20px;
-    border: 1px solid rgba(255, 255, 255, 0.01);
 }
 
-.apropos-bio { margin-bottom: 40px; }
-.apropos-bio p { color: #aaaaaa; font-size: 16px; line-height: 1.8; }
+.apropos-bio { 
+    margin-bottom: 40px; 
+    
+}
+.apropos-bio p {
+     color: #aaaaaa; 
+     font-size: 16px; 
+     line-height: 1.9;
+ }
 
 .apropos-infos-horizontale {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
     gap: 20px;
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
     padding-top: 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .info-item {
     display: flex;
     align-items: center;
     gap: 15px;
-    background: rgba(255, 255, 255, 0.01);
-    padding: 15px;
+    padding: 10px;
     border-radius: 12px;
     border: 1px solid rgba(255, 255, 255, 0.01);
+    background: var(--bg-card);
 }
 
 .icon-wrap {
@@ -392,8 +389,16 @@ header {
     font-size: 16px;
 }
 
-.info-txt label { display: block; font-size: 11px; color: var(--text-gray); text-transform: uppercase; }
-.info-txt p { font-size: 14px; font-weight: 500; word-break: break-all; }
+.info-txt label { 
+    display: block; 
+    font-size: 11px; 
+    color: var(--text-gray); 
+    text-transform: uppercase; 
+}
+.info-txt p {
+     font-size: 14px; 
+     font-weight: 500;
+    word-break: break-all; }
 
 /* ==========================================================================
    SECTION COMPÉTENCES & LANGAGES (ICÔNES ET DESIGN HORIZONTAL EFFECT)
@@ -567,22 +572,12 @@ form { width: 50%; display: flex; flex-direction: column; gap: 16px; }
 footer { padding: 30px 5%; border-top: 1px solid #1a1a1a; }
 .div-footer { display: flex; justify-content: space-between; color: var(--text-gray); font-size: 14px; }
 
+
+
+
 /* ==========================================================================
    VERSION MOBILE HIGH-END RESPONSIVE
    ========================================================================== */
-
-
-
-
-
-
-
-
-
-
-
-
-
 @media (max-width: 1024px) {
     section {
         padding: 90px 5% 45px 5%;
@@ -606,7 +601,22 @@ footer { padding: 30px 5%; border-top: 1px solid #1a1a1a; }
     .boutton-bar .barre-ligne:last-child { width: 60%; align-self: flex-end; }
 
     .nav-menu-central {
-        display: none;
+        position: fixed;
+        top: 0;
+        left: -200;
+        right: 0px;
+        height: 100vh;
+        width: 65%;
+        z-index: 2000;
+        padding: 50px 30px;
+        flex-direction: column;
+        justify-content: center;
+        border-radius: 0;
+        border: none;
+        backdrop-filter: blur(25px);
+        -webkit-backdrop-filter: blur(25px);
+        background: rgba(7, 7, 6, 0.99);
+        /* display: none;
         position: fixed;
         top: 0;
         left: 0;
@@ -621,6 +631,7 @@ footer { padding: 30px 5%; border-top: 1px solid #1a1a1a; }
         justify-content: center;
         border-radius: 0;
         border: none;
+        background-color:red; */
     }
     
     .boutton-bar-ferme { 
@@ -637,36 +648,31 @@ footer { padding: 30px 5%; border-top: 1px solid #1a1a1a; }
         font-size: 20px; 
     }
     
-    .nav-mobile-decor { 
-        display: block; 
-        font-family: monospace; 
-        font-size: 11px; 
-        color: var(--color-primary); 
-        letter-spacing: 4px; 
-        margin-bottom: 40px; 
-        border-left: 2px solid var(--color-primary);
-        padding-left: 10px;
-        opacity: 0.7;
+    
+    .nav-menu-central ul {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         flex-direction: column; 
+         gap: 24px; 
+         width: 100%;
+         margin-top: 50px;
     }
-    
-    .nav-menu-central ul { flex-direction: column; align-items: flex-start; gap: 24px; width: 100%; }
-    .nav-menu-central ul li { width: 100%; }
-    
+    .nav-menu-central ul li { 
+        padding-left:8px;
+        margin-top: 10px;
+        width: 100%; 
+    }
     .nav-menu-central ul li a { 
-        font-size: 28px; 
+        font-size: 20px; 
         font-weight: 800; 
-        padding: 10px 0; 
+        padding: 10px 20px; 
         color: rgba(255,255,255,0.3); 
         display: block;
         letter-spacing: -1px;
         border-bottom: 1px solid rgba(255,255,255,0.03);
     }
-    .nav-menu-central ul li a span {
-        font-family: monospace;
-        font-size: 14px;
-        color: var(--color-accent);
-        margin-right: 10px;
-    }
+    
     .nav-menu-central ul li a.active, .nav-menu-central ul li a:hover { 
         color: var(--text-white); 
         background: none; 
