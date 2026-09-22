@@ -21,13 +21,13 @@ boutton_menu_bar_ferme.addEventListener('click' ,()=>{
 })
 
 /* Important : réinitialiser en desktop */
-window.addEventListener('resize', () => {
+/* window.addEventListener('resize', () => {
   if (window.innerWidth > 1000) {
     nav.style.display ='flex';
     boutton_menu_bar_ferme.style.display = 'none';
     boutton_menu_bar.style.display = 'none';
   }
-});
+}); */
 
 /* poru l'envoie du mail */
 
@@ -64,8 +64,7 @@ boutton_mail.addEventListener('click', ()=>{
     }
     else{
         sendMail();
-    }
-    
+    }  
 });
 
 
@@ -78,3 +77,20 @@ const voir_cv = document.querySelector('.lien-telechargement-cv')
 voir_cv.addEventListener('click' ,()=>{
     window.open('mon_cv.pdf' ,'_blank')
 })
+
+/************************************ 
+   le code pour bien gere les bouttons du menu bar en mode mobile et desktop
+***************************************/
+
+const les_liens = document.querySelectorAll('.nav-lien');
+
+
+for(const lien of les_liens){
+    lien.addEventListener('click' ,()=>{
+        if(window.innerWidth < 1000){
+            nav.style.display='none'
+            boutton_menu_bar.style.display='flex' 
+            boutton_menu_bar_ferme.style.display='none'
+        }
+    }) 
+}
